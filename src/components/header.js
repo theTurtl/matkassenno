@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 
 const Header = ({ siteTitle }) => (
   <header>
-    <div
+    <div class="headerContainer"
       style={{
         margin: `0 auto`,
         maxWidth: 960,
@@ -12,10 +12,19 @@ const Header = ({ siteTitle }) => (
       }}
     >
       <h1>
-        <Link>
-          <img src="../images/matkassen-logo.png" alt="logo matkassen.no"></img>
+        <Link to="/">
+          <div class="logo"></div>
         </Link>
       </h1>
+
+      <div class="navContainer">
+        <div class="menuIcon"></div>
+        <div class="profileContainer">
+          <p>{siteTitle}</p>
+          <div class="profileIcon"></div>
+        </div>
+      </div>
+      
     </div>
   </header>
 )
@@ -25,7 +34,7 @@ Header.propTypes = {
 }
 
 Header.defaultProps = {
-  siteTitle: ``,
+  siteTitle: `Logg på`,
 }
 
 export default Header
